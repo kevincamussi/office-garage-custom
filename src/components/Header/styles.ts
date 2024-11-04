@@ -6,7 +6,10 @@ import { hexToRgb } from "@/utils/colorUtils";
 export const HeaderStyle = styled.header`
   background-color: rgba(${hexToRgb(Colors.black)}, 0.9);
   padding: 24px 0;
+  z-index: 1;
+  // position: relative;
   font-family: "Inria Sans", sans-serif;
+  font-weight: bold;
 `;
 
 export const Nav = styled.nav`
