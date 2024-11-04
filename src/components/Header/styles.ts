@@ -7,7 +7,6 @@ export const HeaderStyle = styled.header`
   background-color: rgba(${hexToRgb(Colors.black)}, 0.9);
   padding: 24px 0;
   z-index: 1;
-  // position: relative;
   font-family: "Inria Sans", sans-serif;
   font-weight: bold;
 `;
@@ -21,7 +20,7 @@ export const Nav = styled.nav`
     display: flex;
 
     li {
-      margin-left: 60px;
+      margin-left: 24px;
     }
   }
 `;
