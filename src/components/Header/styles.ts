@@ -9,6 +9,7 @@ export const HeaderStyle = styled.header`
   z-index: 1;
   font-family: "Inria Sans", sans-serif;
   font-weight: bold;
+  margin-bottom: 48px;
 `;
 
 export const Nav = styled.nav`

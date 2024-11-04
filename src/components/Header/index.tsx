@@ -10,17 +10,21 @@ const Header = () => {
   return (
     <S.HeaderStyle>
       <div className="container flex justify-between">
-        <Image
-          src="/logo.png"
-          alt={"Logo"}
-          width={582}
-          height={105}
-          style={{ maxWidth: "582px", height: "auto" }}
-        />
+        <h1>
+          <Link href={"/"}>
+            <Image
+              src="/logo.png"
+              alt={"Office Garage Custom"}
+              width={582}
+              height={105}
+              style={{ maxWidth: "582px", height: "auto" }}
+            />
+          </Link>
+        </h1>
         <S.Nav>
           <ul>
             <li>
-              <Link href={"#"}>
+              <Link href={"/"}>
                 <Button bg="" hover={Colors.white} padding="8px" width="124px">
                   HOME
                 </Button>
@@ -34,7 +38,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link href={"#"}>
+              <Link href={"/sobre"}>
                 <Button
                   bg=""
                   hover={Colors.white}

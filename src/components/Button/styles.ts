@@ -11,6 +11,7 @@ export const ButtonStyle = styled.button<ButtonProps>`
   padding: ${({ padding }) => padding};
   text-align: center;
   transition: 500ms;
+
   width: ${({ width }) => width};
 
   &:hover {

@@ -49,4 +49,5 @@ body {
 export const Colors = {
   black: "#000000",
   white: "#fff",
+  gray: "#D9D9D9",
 };
