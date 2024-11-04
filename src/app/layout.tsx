@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
+import { Inria_Sans } from "next/font/google";
+
+import "../styles/global.css";
 import StyledComponentsRegystry from "@/lib/registry";
 import { GlobalStyle } from "@/styles/global";
+
+import Header from "@/components/Header";
+
+const InriaSans = Inria_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,10 +24,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <StyledComponentsRegystry>
-        <GlobalStyle />
-        <body>{children}</body>
-      </StyledComponentsRegystry>
+      <body className={InriaSans.className}>
+        <StyledComponentsRegystry>
+          <GlobalStyle />
+          <Header />
+          {children}
+        </StyledComponentsRegystry>
+      </body>
     </html>
   );
 }

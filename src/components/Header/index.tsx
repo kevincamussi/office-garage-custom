@@ -1,12 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { HeaderStyle } from "./styles";
+import * as S from "./styles";
+import Link from "next/link";
 
 const Header = () => {
   return (
-    <HeaderStyle>
-      <div className="container">
+    <S.HeaderStyle>
+      <div className="container flex justify-between">
         <Image
           src="/logo.png"
           alt={"Logo"}
@@ -14,8 +15,24 @@ const Header = () => {
           height={105}
           style={{ maxWidth: "582px", height: "auto" }}
         />
+        <S.Nav>
+          <ul>
+            <li>
+              <Link href={"#"}>HOME</Link>
+            </li>
+            <li>
+              <Link href={"#"}>PORTFÓLIO</Link>
+            </li>
+            <li>
+              <Link href={"#"}>SOBRE</Link>
+            </li>
+            <li>
+              <Link href={"#"}>CONTATO</Link>
+            </li>
+          </ul>
+        </S.Nav>
       </div>
-    </HeaderStyle>
+    </S.HeaderStyle>
   );
 };
 
