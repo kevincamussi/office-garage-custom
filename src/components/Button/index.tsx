@@ -1,3 +1,5 @@
+"use client";
+
 import { ButtonStyle } from "./styles";
 
 export type ButtonProps = {
@@ -6,7 +8,10 @@ export type ButtonProps = {
   hover?: string;
   hovercolor?: string;
   width?: string;
+  isactive?: boolean;
   children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
 };
 
 const Button = ({
@@ -16,6 +21,8 @@ const Button = ({
   hover,
   hovercolor,
   width,
+  className,
+  onClick,
 }: ButtonProps) => {
   return (
     <ButtonStyle
@@ -24,6 +31,8 @@ const Button = ({
       hover={hover}
       hovercolor={hovercolor}
       width={width}
+      className={className}
+      onClick={onClick}
     >
       {children}
     </ButtonStyle>

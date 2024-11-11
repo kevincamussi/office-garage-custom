@@ -1,3 +1,5 @@
+"use client";
+
 import styled from "styled-components";
 
 import { ButtonProps } from ".";
@@ -11,8 +13,12 @@ export const ButtonStyle = styled.button<ButtonProps>`
   padding: ${({ padding }) => padding};
   text-align: center;
   transition: 500ms;
-
   width: ${({ width }) => width};
+
+  &.active {
+    background-color: ${Colors.white};
+    color: ${Colors.black};
+  }
 
   &:hover {
     background-color: ${({ hover }) => hover};

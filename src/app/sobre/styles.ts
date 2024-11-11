@@ -1,3 +1,5 @@
+"use client;";
+
 import { Colors } from "@/styles/global";
 import styled from "styled-components";
 

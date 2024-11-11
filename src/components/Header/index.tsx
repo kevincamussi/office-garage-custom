@@ -1,17 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import * as S from "./styles";
 import Link from "next/link";
+
+import * as S from "./styles";
 import Button from "../Button";
 import { Colors } from "@/styles/global";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
     <S.HeaderStyle>
       <div className="container flex justify-between">
         <h1>
-          <Link href={"/"}>
+          <Link href={"/home"}>
             <Image
               src="/logo.png"
               alt={"Office Garage Custom"}
@@ -24,15 +28,25 @@ const Header = () => {
         <S.Nav>
           <ul>
             <li>
-              <Link href={"/"}>
-                <Button bg="" hover={Colors.white} padding="8px" width="124px">
+              <Link href={"/home"}>
+                <Button
+                  hover={Colors.white}
+                  padding="8px"
+                  width="124px"
+                  className={pathname === "/home" ? "active" : ""}
+                >
                   HOME
                 </Button>
               </Link>
             </li>
             <li>
-              <Link href={"#"}>
-                <Button bg="" hover={Colors.white} padding="8px" width="124px">
+              <Link href={"/portfolio"}>
+                <Button
+                  hover={Colors.white}
+                  padding="8px"
+                  width="124px"
+                  className={pathname === "/portfolio" ? "active" : ""}
+                >
                   PORTFÓLIO
                 </Button>
               </Link>
@@ -42,17 +56,23 @@ const Header = () => {
                 <Button
                   bg=""
                   hover={Colors.white}
-                  hovercolor={Colors.black}
-                  padding="8px 0"
+                  padding="8px"
                   width="124px"
+                  className={pathname === "/sobre" ? "active" : ""}
                 >
                   SOBRE
                 </Button>
               </Link>
             </li>
             <li>
-              <Link href={"#"}>
-                <Button bg="" hover={Colors.white} padding="8px" width="124px">
+              <Link href={"/contato"}>
+                <Button
+                  bg=""
+                  hover={Colors.white}
+                  padding="8px"
+                  width="124px"
+                  className={pathname === "/contato" ? "active" : ""}
+                >
                   CONTATO
                 </Button>
               </Link>
