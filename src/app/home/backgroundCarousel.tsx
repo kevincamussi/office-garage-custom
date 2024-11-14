@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const images = [
-  "/carousel/foto4.jpg",
-  "/carousel/foto5.jpg",
-  "/carousel/foto6.jpg",
-  "/carousel/foto7.jpg",
-  "/carousel/foto8.jpg",
-  "/carousel/foto9.jpg",
+  "/carousel/foto4.JPG",
+  "/carousel/foto5.JPG",
+  "/carousel/foto6.JPG",
+  "/carousel/foto7.JPG",
+  "/carousel/foto8.JPG",
+  "/carousel/foto9.JPG",
 ];
 
 const Background = styled.div`
