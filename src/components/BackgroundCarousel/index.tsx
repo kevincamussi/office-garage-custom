@@ -47,7 +47,6 @@ export const BackgroundCarousel = () => {
         <Image
           layout="fill"
           objectFit="cover"
-          priority={index === 0}
           key={index}
           src={src}
           alt={`Background ${index + 1}`}
