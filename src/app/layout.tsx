@@ -3,10 +3,9 @@ import { Inria_Sans } from "next/font/google";
 
 import "../styles/global.css";
 import StyledComponentsRegystry from "@/lib/registry";
-import { BackgroundCarousel, GlobalStyle } from "@/styles/global";
+import { GlobalStyle } from "@/styles/global";
 
 import Header from "@/components/Header";
-import { StoreProvider } from "@/store/storeProvider";
 
 const InriaSans = Inria_Sans({
   subsets: ["latin"],
@@ -27,12 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={InriaSans.className}>
         <StyledComponentsRegystry>
-          <StoreProvider>
-            <GlobalStyle />
-
-            <Header />
-            {children}
-          </StoreProvider>
+          <GlobalStyle />
+          <Header />
+          {children}
         </StyledComponentsRegystry>
       </body>
     </html>

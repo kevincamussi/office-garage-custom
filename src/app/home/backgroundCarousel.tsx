@@ -12,9 +12,7 @@ const images = [
   "/carousel/foto9.jpg",
 ];
 
-// Define o componente `Background` com o `background-image` dinâmico
-const Background = styled.div<{ backgroundImage: string }>`
-  background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
+const Background = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -51,5 +49,7 @@ export const BackgroundCarousel = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <Background backgroundImage={images[currentIndex]} />;
+  return (
+    <Background style={{ backgroundImage: `url(${images[currentIndex]})` }} />
+  );
 };

@@ -1,14 +1,15 @@
 "use client;";
 
-import { Colors } from "@/styles/global";
+import { motion } from "framer-motion";
 import styled from "styled-components";
+import { Colors } from "@/styles/global";
 
-export const AboutCard = styled.div`
+export const AboutCard = styled(motion.div)`
   padding: 250px 300px;
   background-color: ${Colors.gray};
 `;
 
-export const AboutDiv = styled.div`
+export const AboutDiv = styled(motion.div)`
   font-family: "Inria Sans", sans-serif;
 
   h2 {
