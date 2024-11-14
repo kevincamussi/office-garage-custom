@@ -6,6 +6,7 @@ import StyledComponentsRegystry from "@/lib/registry";
 import { GlobalStyle } from "@/styles/global";
 
 import Header from "@/components/Header";
+import { BackgroundCarousel } from "./../components/BackgroundCarousel";
 
 const InriaSans = Inria_Sans({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={InriaSans.className}>
         <StyledComponentsRegystry>
           <GlobalStyle />
+          <BackgroundCarousel />
           <Header />
           {children}
         </StyledComponentsRegystry>

@@ -4,12 +4,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
 import { Colors } from "@/styles/global";
-import { BackgroundCarousel } from "./backgroundCarousel";
 
 const Home = () => {
   return (
     <>
-      <BackgroundCarousel />
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 100, y: 710 }}
