@@ -48,6 +48,7 @@ export const BackgroundCarousel = () => {
           layout="fill"
           objectFit="cover"
           key={index}
+          priority={index === 0}
           src={src}
           alt={`Background ${index + 1}`}
           className={index === currentIndex ? "fade-in" : "fade-out"}
