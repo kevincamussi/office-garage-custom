@@ -1,15 +1,11 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Background } from "./styles";
 import Image from "next/image";
 
 export const BackgroundCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
-
-  const pathname = usePathname();
 
   const images = [
     "/carousel/foto4.JPG",
