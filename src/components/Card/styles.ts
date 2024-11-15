@@ -1,7 +1,12 @@
+"use client";
+
 import { Colors } from "@/styles/global";
 import styled from "styled-components";
 
-export const CardStyle = styled.div<{ cardwidth: number; cardheight: number }>`
+export const CardStyle = styled.div<{
+  cardwidth: number;
+  cardheight: number;
+}>`
   border-radius: 8px;
   overflow: hidden;
   width: ${({ cardwidth }) => `${cardwidth}px`};
@@ -47,8 +52,3 @@ export const CardStyle = styled.div<{ cardwidth: number; cardheight: number }>`
     opacity: 0.7;
   }
 `;
-
-// &:hover .overlay {
-//   background-color: ${Colors.gray};
-//   opacity: 0.7;
-// }

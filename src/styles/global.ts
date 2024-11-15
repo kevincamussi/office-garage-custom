@@ -17,8 +17,6 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
 }
 
-
-
 .container {
   max-width: 1700px;
   width: 100%;
