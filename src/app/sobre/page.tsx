@@ -10,15 +10,7 @@ const Sobre = () => {
         animate={{ opacity: 100, y: 0 }}
         transition={{ duration: 2 }}
       >
-        <S.AboutCard />
-        <h2 className="mt-12">A OFICINA</h2>
-      </S.AboutDiv>
-      <S.AboutDiv
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 100, y: 0 }}
-        transition={{ duration: 2 }}
-      >
-        <h2 className="mb-12">NOSSA EQUIPE</h2>
+        <h2 className="mb-8">A OFICINA</h2>
         <S.AboutCard />
       </S.AboutDiv>
     </div>

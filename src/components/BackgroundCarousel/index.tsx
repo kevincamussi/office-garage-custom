@@ -1,28 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Background } from "./styles";
 import Image from "next/image";
 
-export const BackgroundCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+type CarouselType = {
+  images: string[];
+};
 
-  const images = [
-    "/carousel/FOTO1.JPG",
-    "/carousel/FOTO2.JPG",
-    "/carousel/FOTO3.JPG",
-    "/carousel/FOTO4.JPG",
-    "/carousel/FOTO5.JPG",
-    "/carousel/FOTO6.JPG",
-    "/carousel/FOTO7.JPG",
-    "/carousel/FOTO8.JPG",
-    "/carousel/FOTO9.JPG",
-    "/carousel/FOTO10.JPG",
-    "/carousel/FOTO11.JPG",
-    "/carousel/FOTO12.JPG",
-    "/carousel/FOTO13.JPG",
-    "/carousel/FOTO14.JPG",
-  ];
+const BackgroundCarousel = ({ images }: CarouselType) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,16 +20,7 @@ export const BackgroundCarousel = () => {
   }, [images.length]);
 
   return (
-    <Background
-    //   style={{
-    //     backgroundImage: `${
-    //       pathname === "/home"
-    //         ? `url(${images[currentIndex]})`
-    //         : "url(/carousel/IMG_2514.JPG)"
-    //     } `,
-    //   }}
-    //   className={isFading ? "fade-out" : ""}
-    >
+    <Background>
       {images.map((src, index) => (
         <Image
           layout="fill"
@@ -57,3 +35,5 @@ export const BackgroundCarousel = () => {
     </Background>
   );
 };
+
+export default BackgroundCarousel;

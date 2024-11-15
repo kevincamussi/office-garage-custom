@@ -17,12 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
 }
 
-body {
- 
-}
+
 
 .container {
-  max-width: 1500px;
+  max-width: 1700px;
   width: 100%;
   margin: 0 auto;
 }
@@ -33,26 +31,3 @@ html {
 
 
 `;
-
-// body {
-//   background-image: url("/moto.jfif");
-//   background-size: 100%;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   width: 100%;
-//   height: 100%;
-//   margin: 0;
-//   position: relative;
-//   z-index: 1;
-
-//   ::before {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(0, 0, 0, 0.05);
-//     z-index: -1;
-//   }
-// }
