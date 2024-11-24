@@ -9,7 +9,6 @@ export const Background = styled.div`
   top: 0;
   left: 0;
   z-index: -1;
-  filter: blur(3px);
   overflow: hidden;
 
   .fade-in {
